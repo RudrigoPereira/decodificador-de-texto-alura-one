@@ -26,6 +26,10 @@
     --gray-500: #343A40;
 }
 
+/* header {
+    background-color: plum;
+} */
+
 body {
     background-color: var(--light-blue-100);
     margin: 40px;
@@ -35,15 +39,93 @@ body {
     padding: 0 45px;
 }
 
+main {
+    display: flex;
+    justify-content: right;
+    gap: 10%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45vw;
+    margin-top: 5%;
+}
+
 #input-area {
+    width: 45vw;
+    height: 60vh;
     font-family: "Inter", sans-serif;
     font-size: 32px;
     color: var(--dark-blue-300);
     background: none;
     border: none;
     resize: none;
+    /* background-color: pink; */
 }
 
 #input-area::placeholder {
     color: var(--dark-blue-300);
+}
+
+.notification {
+    color: var(--gray-400);
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+}
+
+.notification strong {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    color: white;
+    background-color: var(--gray-400);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 400;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cript-btn {
+    width: 22vw;
+    height: 67px;
+    background-color: var(--dark-blue-300);
+    border: none;
+    border-radius: 24px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.cript-btn:hover {
+    background-color: var(--dark-blue-400);
+}
+
+.descript-btn {
+    width: 22vw;
+    height: 67px;
+    background-color: var(--light-blue-200);
+    border: var(--dark-blue-300) solid 1px;
+    border-radius: 24px;
+    color: var(--dark-blue-300);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.descript-btn:hover {
+    background-color: var(--light-blue-300);
+}
+
+.response-container {
+    background-color: white;
+    border-radius: 32px;
+    height: 91vh;
+    width: 400px;
+    margin-top: -52px;
 }

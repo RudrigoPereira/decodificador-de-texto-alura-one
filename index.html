@@ -8,10 +8,10 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="./assets/logo.png" alt="Logotipo Alura">
+        <img class="logo" src="./assets/logo.svg" alt="Logotipo Alura">
     </header>
     <main>
-        <section>
+        <section class="input-container">
             <textarea 
                 name="input-area" 
                 id="input-area" 
@@ -19,6 +19,14 @@
                 rows="10"
                 placeholder="Digite seu texto"
             ></textarea>
+            <p class="notification"><strong>!</strong> Apenas letras minúsculas e sem acento.</p>
+            <div class="buttons">
+                <button class="cript-btn">Criptografar</button>
+                <button class="descript-btn">Descriptografar</button>
+            </div>
+        </section>
+        <section class="response-container">
+
         </section>
     </main>
     <footer></footer>
