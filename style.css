@@ -32,7 +32,7 @@
 
 body {
     background-color: var(--light-blue-100);
-    margin: 40px;
+    margin: 2.5rem;
 }
 
 .logo {
@@ -42,13 +42,13 @@ body {
 main {
     display: flex;
     justify-content: right;
-    gap: 10%;
+    gap: 10vw;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem;
     width: 45vw;
     margin-top: 5%;
 }
@@ -57,7 +57,7 @@ main {
     width: 45vw;
     height: 60vh;
     font-family: "Inter", sans-serif;
-    font-size: 32px;
+    font-size: 2rem;
     color: var(--dark-blue-300);
     background: none;
     border: none;
@@ -72,13 +72,13 @@ main {
 .notification {
     color: var(--gray-400);
     font-family: "Inter", sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .notification strong {
     display: inline-flex;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     color: white;
     background-color: var(--gray-400);
     align-items: center;
@@ -94,13 +94,13 @@ main {
 
 .cript-btn {
     width: 22vw;
-    height: 67px;
+    height: 7.8vh;
     background-color: var(--dark-blue-300);
     border: none;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     color: white;
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .cript-btn:hover {
@@ -109,13 +109,13 @@ main {
 
 .descript-btn {
     width: 22vw;
-    height: 67px;
+    height: 7.8vh;
     background-color: var(--light-blue-200);
     border: var(--dark-blue-300) solid 1px;
-    border-radius: 24px;
+    border-radius: 1.5rem;
     color: var(--dark-blue-300);
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .descript-btn:hover {
@@ -127,26 +127,95 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 0.95rem;
     background-color: white;
-    border-radius: 32px;
+    border-radius: 2rem;
     height: 91vh;
-    width: 400px;
-    margin-top: -52px;
-    padding: 32px;
+    width: 25vw;
+    margin-top: -3.25rem;
+    padding: 2rem;
 }
 
-.response-title {
+.no-msg-img {
+    width: 100%;
+}
+
+.no-msg-title {
     font-family: "Inter", sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     color: var(--gray-500);
 }
 
-.response-paragraph {
+.no-msg-paragraph {
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     color: var(--gray-400);
+}
+
+@media screen and (max-width: 1250px) {
+    main {
+        gap: 5vw;
+    }
+
+    .response-container {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    main {
+        flex-direction: column;
+        gap: 11vh;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .input-container {
+        width: 100%;
+    }
+
+    #input-area {
+        width: 100%;
+    }
+
+    .cript-btn {
+        width: 43vw;
+    }
+
+    .descript-btn {
+        width: 43vw;
+    }
+
+    .no-msg-img {
+        display: none;
+    }
+
+    .response-container {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .cript-btn {
+        width: 100%;
+    }
+
+    .descript-btn {
+        width: 100%;
+    }
+
+    .response-container {
+        padding: 1.5rem;
+    }
 }
