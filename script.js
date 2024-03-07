@@ -35,12 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const inputText = inputArea.value.trim();
         if (inputText && inputText.toLowerCase() === inputText && !hasAccentChars(inputText) && !hasUpperCase(inputText)) {
             const encryptedText = encryptText(inputText);
-            responseContainer.style.display = 'block';
+            responseContainer.style.alignItems = 'flex-start';
+            responseContainer.style.justifyContent = 'space-between';
             noMsgImg.style.display = 'none';
             noMsgTitle.style.display = 'none';
             noMsgParagraph.style.display = 'none';
             responseContainer.classList.add('response-text');
             responseContainer.textContent = encryptedText;
+            addCopyButton(responseContainer, encryptedText);
         } else {
             if (inputText !== '') {
                 responseContainer.classList.add('warning');
@@ -53,12 +55,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const inputText = inputArea.value.trim();
         if (inputText && inputText.toLowerCase() === inputText && !hasAccentChars(inputText) && !hasUpperCase(inputText)) {
             const decryptedText = decryptText(inputText);
-            responseContainer.style.display = 'block';
+            responseContainer.style.alignItems = 'flex-start';
+            responseContainer.style.justifyContent = 'space-between';
             noMsgImg.style.display = 'none';
             noMsgTitle.style.display = 'none';
             noMsgParagraph.style.display = 'none';
             responseContainer.classList.add('response-text');
             responseContainer.textContent = decryptedText;
+            addCopyButton(responseContainer, decryptedText);
         } else {
             if (inputText !== '') {
                 responseContainer.classList.add('warning');
@@ -66,4 +70,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    function addCopyButton(container, text) {
+        const copyBtn = document.createElement('button');
+        copyBtn.textContent = 'Copiar';
+        copyBtn.classList.add('copy-btn');
+        copyBtn.addEventListener('click', function () {
+            copyToClipboard(text);
+        });
+        container.appendChild(copyBtn);
+    }
+
+    function copyToClipboard(text) {
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = text;
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        tempTextArea.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+    }
 });
