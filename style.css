@@ -26,10 +26,6 @@
     --gray-500: #343A40;
 }
 
-/* header {
-    background-color: plum;
-} */
-
 body {
     background-color: var(--light-blue-100);
     margin: 2.5rem;
@@ -92,7 +88,7 @@ main {
     justify-content: space-between;
 }
 
-.cript-btn {
+.crypt-btn {
     width: 22vw;
     height: 7.8vh;
     background-color: var(--dark-blue-300);
@@ -103,11 +99,11 @@ main {
     font-size: 1rem;
 }
 
-.cript-btn:hover {
+.crypt-btn:hover {
     background-color: var(--dark-blue-400);
 }
 
-.descript-btn {
+.decrypt-btn {
     width: 22vw;
     height: 7.8vh;
     background-color: var(--light-blue-200);
@@ -118,7 +114,7 @@ main {
     font-size: 1rem;
 }
 
-.descript-btn:hover {
+.decrypt-btn:hover {
     background-color: var(--light-blue-300);
 }
 
@@ -155,6 +151,20 @@ main {
     color: var(--gray-400);
 }
 
+.response-text {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    color: var(--gray-400);
+}
+
+.warning {
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-400);
+    text-align: center;
+}
+
 @media screen and (max-width: 1250px) {
     main {
         gap: 5vw;
@@ -183,11 +193,11 @@ main {
         width: 100%;
     }
 
-    .cript-btn {
+    .crypt-btn {
         width: 43vw;
     }
 
-    .descript-btn {
+    .decrypt-btn {
         width: 43vw;
     }
 
@@ -207,11 +217,11 @@ main {
         gap: 2vh;
     }
 
-    .cript-btn {
+    .crypt-btn {
         width: 100%;
     }
 
-    .descript-btn {
+    .decrypt-btn {
         width: 100%;
     }
 
