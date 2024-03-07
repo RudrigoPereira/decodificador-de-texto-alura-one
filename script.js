@@ -80,14 +80,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         container.appendChild(copyBtn);
     }
-
+    
     function copyToClipboard(text) {
-        const tempTextArea = document.createElement('textarea');
-        tempTextArea.value = text;
-        document.body.appendChild(tempTextArea);
-        tempTextArea.select();
-        tempTextArea.setSelectionRange(0, 99999);
-        document.execCommand('copy');
-        document.body.removeChild(tempTextArea);
-    }
+        const messageElement = document.getElementById('copy-message');
+        const successMessage = 'Texto copiado com sucesso!';
+        const errorMessage = 'Erro ao copiar o texto para a área de transferência. Por favor, tente novamente.';
+        const displayTime = 2500;
+    
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                showMessage(successMessage, 'green');
+            })
+            .catch(() => {
+                showMessage(errorMessage, 'red');
+            });
+    
+        function showMessage(message, color) {
+            messageElement.textContent = message;
+            messageElement.style.backgroundColor = color;
+            messageElement.style.display = 'block';
+    
+            setTimeout(() => {
+                messageElement.style.display = 'none';
+            }, displayTime);
+        }
+    }       
 });
