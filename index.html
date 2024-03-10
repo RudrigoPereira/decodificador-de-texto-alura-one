@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <header>
+        <img class="logo" src="./assets/logo.svg" alt="Logotipo Alura">
+    </header>
+    <main>
+        <div id="copy-message" class="copy-message"></div>
+
+        <section class="input-container">
+            <textarea 
+                name="input-area" 
+                id="input-area" 
+                cols="30" 
+                rows="10"
+                placeholder="Digite seu texto"
+            ></textarea>
+            <p class="notification"><strong>!</strong> Apenas letras minúsculas e sem acento.</p>
+            <div class="buttons">
+                <button class="crypt-btn">Criptografar</button>
+                <button class="decrypt-btn">Descriptografar</button>
+            </div>
+        </section>
+        <section class="response-container">
+            <img class="no-msg-img" src="./assets/no-msg.svg" alt="Sem Mensagem">
+            <h2 class="no-msg-title">Nenhuma mensagem encontrada</h2>
+            <p class="no-msg-paragraph">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Rodrigo Ferreira Pereira</p>
+        <a href="https://github.com/RudrigoPereira" target="_blank"><img src="./assets/github.png"></a>
+        <a href="https://www.linkedin.com/in/rodrigoferreirapereira/" target="_blank"><img src="./assets/linkedin.png"></a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
